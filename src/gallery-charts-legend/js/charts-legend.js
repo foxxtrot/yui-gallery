@@ -1,4 +1,4 @@
-Y.Charts.Legend = Y.Base.create("Legend", Y.Plugin.Base, [], {
+Y.Chart.Legend = Y.Base.create("Legend", Y.Plugin.Base, [], {
         initializer: function (config) {
             this.afterHostEvent('render', this.renderLegend);
         },
