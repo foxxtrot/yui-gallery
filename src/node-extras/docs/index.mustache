@@ -1,0 +1,28 @@
+<div class="intro">
+    <p>
+    A collection of useful methods for Y.Node that are not present in the default distribution
+    </p>
+</div>
+
+<h2>Description</h2>
+
+<p>A collection of useful methods on Y.Node. Click the Docs link below for up-to-date documentation.<br>
+<br>
+<ul>
+<li>wrapInner - wraps the current children in a new top-level child element</li>
+<li>Y.Node.frag - Returns a document fragment wrapped in a Node</li>
+<li>one - if called with no arguments will return the firstChild</li>
+<li>all - if called with no arguments will return the children as a NodeList</li>
+<li>prependTo - Takes the argument and inserts it as the firstChild of the instance</li>
+</ul>
+<br>
+</p>
+
+```
+YUI().use('gallery-node-extras', function(Y) {
+
+    Y.one('#test').wrapInner('<div class="inner" />');
+
+});
+```
+

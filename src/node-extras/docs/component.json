@@ -1,0 +1,10 @@
+{
+    "name"       : "node-extras",
+    "displayName": "Gallery: node-extras",
+    "description": "A collection of useful methods for Y.Node that are not present in the default distribution",
+    "author"     : [ "foxxtrot" ],
+
+    "tags": [ "gallery" ],
+
+    "examples": []
+}
