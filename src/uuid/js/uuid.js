@@ -45,14 +45,23 @@ _formatUUIDString: function(uuid) {
 /**
  * Generate 32-bits of entropy and return them as an unsigned integer
  *
- * This version uses Math.random, so the entropy is only as good as the browser vendor's default random method. Further, since you can't generate an arbitary amount of entropy at once, this function is likely going to be called multiple times. It is impossible to guarantee quality of entropy using this method, but it is the fastest and simplest way to generate entropy. This is a 'good-enough' fallback formany uses, but if you need real guarantees of randomness, then you should consider other options.
- * 
+ * This version uses Math.random, so the entropy is only as good as the browser
+ * vendor's default random method. Further, since you can't generate an arbitary
+ * amount of entropy at once, this function is likely going to be called multiple
+ * times. It is impossible to guarantee quality of entropy using this method, but
+ * it is the fastest and simplest way to generate entropy. This is a 'good-enough'
+ * fallback for many uses, but if you need real guarantees of randomness, then
+ * you should consider other options.
+ *
  * @method _gen32BitEntropy
  * @static
  * @private
  * @returns int
  */
-_gen32BitEntropy: function() { return (Math.random() * 0x100000000) | 0; },
+_gen32BitEntropy: function() {
+    /*jslint bitwise: true */
+    return (Math.random() * 0x100000000) | 0;
+},
 
 /**
  * Convert a 32-bit integer into an 8-character hex string
@@ -74,6 +83,7 @@ _intToHex: function(number) { return ('00000000' + number.toString(16)).slice(-8
  * @returns string
  */
 _randomUUID: function() {
+    /*jslint bitwise: true */
     var data = [];
 
     data.push(u._gen32BitEntropy());
