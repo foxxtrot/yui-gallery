@@ -15,7 +15,7 @@ var C = Y.namespace('Crypto'),
  * @method generateUUID
  * @static
  * @param formatted Boolean If true, UUID will be formatted according to RFC 4122
- * @retuns string UUID either formatted with dashes or raw.
+ * @return string UUID either formatted with dashes or raw.
  */
 C.UUID = u = function(formatted) {
     var uuid = u._randomUUID();
@@ -30,6 +30,7 @@ Y.mix(u, {
  * @static
  * @private
  * @param uuid string 32-character string to have dashes added to match RFC 4122
+ * @return string formatted UUID
  */
 _formatUUIDString: function(uuid) {
     var work = [];
@@ -56,7 +57,7 @@ _formatUUIDString: function(uuid) {
  * @method _gen32BitEntropy
  * @static
  * @private
- * @returns int
+ * @return int
  */
 _gen32BitEntropy: function() {
     /*jslint bitwise: true */
@@ -69,8 +70,8 @@ _gen32BitEntropy: function() {
  * @method _intToHex
  * @static
  * @private
- * @params number int A number assumed to have been normalized to be a 32-bit unsigned integer.
- * @returns string
+ * @param number int A number assumed to have been normalized to be a 32-bit unsigned integer.
+ * @return string
  */
 _intToHex: function(number) { return ('00000000' + number.toString(16)).slice(-8); },
 
@@ -80,7 +81,7 @@ _intToHex: function(number) { return ('00000000' + number.toString(16)).slice(-8
  * @method _randomUUID
  * @static
  * @private
- * @returns string
+ * @return string
  */
 _randomUUID: function() {
     /*jslint bitwise: true */
