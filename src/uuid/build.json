@@ -1,0 +1,10 @@
+{
+    "name": "uuid",
+    "builds": {
+        "gallery-uuid": {
+            "jsfiles": [
+                "uuid.js"
+            ]
+        }
+    }
+}

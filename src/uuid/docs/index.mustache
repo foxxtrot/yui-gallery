@@ -1,0 +1,30 @@
+<div class="intro">
+    <p>
+    A Universally-Unique Identifier generator for YUI
+    </p>
+</div>
+
+<h2>Description</h2>
+
+<p>A UUID Generator in JavaScript. This version uses Math.random and bitwise operations, so it should work in any environment, even a quite old one.<br>
+<br>
+Many pages have been written about why <a href="http://baagoe.org/en/wiki/Better_random_numbers_for_javascript">Math.random shouldn't be used for 'serious programming'</a>. The points are well taken, Math.random is not guaranteed to be a cryptographically secure PRNG. If, for your usage, you need real guarantees, this version will not work, and you should do UUID generation server-side, which would allow you to generate UUIDs not using the PRNG version anyway. For my usage, this is 'good-enough', but you should evaluate that for your own application.<br>
+<br>
+There are a few improvements coming. The WHATWG has a proprosal for a window.crypto object, which, in addition to strongly-typed arrays, will allow this to work fast and more correctly, and with Loader's conditional loading, we can use that method in versions that support it.<br>
+<br>
+I am seriously considering writing a pure JS PRNG that will,while being dramatically slower, provide far more quality in the random-number generation, that the UUID generator could optionally use. Not as good a solution as window.crypto, but we'll see what the adoption curve on that feature looks like before I take this step.<br>
+<br>
+Future improvements:<br>
+<ul>
+<li>Conditional Loading to optionally use a <a href="http://wiki.whatwg.org/wiki/Crypto">window.crypto</a> version for better guarantees and speed</li>
+<li>Optionally use a better PRNG than Math.random that will go into the Y.Crypto namespace</li>
+</ul>
+<br>
+</p>
+
+```
+YUI().use('gallery-uuid', function(Y) {
+    var uuid = Y.Crypto.UUID();
+});
+```
+

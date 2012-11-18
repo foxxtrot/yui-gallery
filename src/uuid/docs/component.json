@@ -1,0 +1,10 @@
+{
+    "name"       : "uuid",
+    "displayName": "Gallery: uuid",
+    "description": "A Universally-Unique Identifier generator for YUI",
+    "author"     : [ "foxxtrot" ],
+
+    "tags": [ "gallery" ],
+
+    "examples": []
+}

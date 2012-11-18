@@ -1,4 +1,4 @@
-YUI.add('gallery-uuid-test', function (Y) {
+YUI.add('module-tests', function(Y) {
     var Assert = Y.Assert,
         suite;
 
@@ -24,7 +24,7 @@ YUI.add('gallery-uuid-test', function (Y) {
             var uuid = Y.Crypto.UUID();
 
             Assert.areEqual(32, uuid.length);
-            Assert.isFalse(/[^0-9a-f]/.test(uuid));
+            Assert.isFalse(/[^0-9a-fA-F]/.test(uuid));
         },
         'formatted uuid should have correct length': function() {
             var uuid = Y.Crypto.UUID(true);
@@ -54,6 +54,4 @@ YUI.add('gallery-uuid-test', function (Y) {
     }));
 
     Y.Test.Runner.add(suite);
-}, '@VERSION@', {
-    requires: ['gallery-uuid', 'test']
-});
+},'', { requires: [ 'gallery-uuid', 'test' ] });
