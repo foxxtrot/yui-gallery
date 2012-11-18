@@ -20,9 +20,10 @@ Y.mix(_C, {
      * @static
      */
     add32Bit: function (x,y) {
+        /*jslint bitwise: true */
         return (x  + y) & 0xffffffff;
     },
-  /**
+    /**
      * Converts a standard JavaScript string (utf16) to a UTF8 string
      *
      * @method utf16ToUtf8
@@ -32,6 +33,7 @@ Y.mix(_C, {
      * @static
      */
     utf16ToUtf8: function(string) {
+        /*jslint bitwise: true */
         var output = "", cd, pr, i = 0;
 
         while (i < string.length) {
@@ -75,7 +77,8 @@ Y.mix(_C, {
      * @static
      */
     utf8ToByteArray: function(string) {
-        var output = Array(string.length >> 2), i, j;
+        /*jslint bitwise: true */
+        var output = new Array(string.length >> 2), i, j;
         for (i = 0 ; i < output.length ; i += 1) { output[i] = 0; }
         for (i = 0 ; i < string.length ; i += 1) {
             j = i * 8;
@@ -84,6 +87,7 @@ Y.mix(_C, {
         return output;
     },
     byteArrayToString: function(array) {
+        /*jslint bitwise: true */
         var output = "", i, code;
         for (i = 0 ; i < array.length * 32 ; i += 8) {
             code = (array[i >> 5] >>> (i % 32));
@@ -92,6 +96,7 @@ Y.mix(_C, {
         return output;
     },
     utf8ToHex: function(string) {
+        /*jslint bitwise: true */
         var output = "", i, cd, chars = "0123456789abcdef";
         for (i = 0 ; i < string.length ; i += 1) {
             cd = string.charCodeAt(i);

@@ -1,19 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-  <head>
-    <title>MD5 Implementation Tests</title>
-     <script type="text/javascript" src="http://yui.yahooapis.com/3.0.0/build/yui/yui-min.js"></script>
-     <script type="text/javascript" src="../../../build/gallery-crypto/gallery-crypto-md5.js"></script>
-  </head>
-  <body class="yui-skin-sam">
-		<script type="text/javascript">
-// Create new YUI instance, and populate it with the required modules
-YUI({
-    combine: false, 
-    debug: true, 
-    filter:"RAW"
-}).use("gallery-crypto-md5", 'test', 'console', function(Y) {
-	var md5TestCase = new Y.Test.Case({
+YUI.add('module-tests', function(Y) {
+
+    var suite = new Y.Test.Suite('crypto');
+
+    suite.add(new Y.Test.Case({
 		name: "MD5 Test Cases",
 		testMD5TestSuite: function() {
 			var MD5 = Y.Crypto.MD5;
@@ -25,12 +14,9 @@ YUI({
 			Y.Assert.areEqual("d174ab98d277d9f5a5611c2c9f419d9f", MD5("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"), 'MD5("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789")');
 			Y.Assert.areEqual("57edf4a22be3c955ac49da2e2107b67a", MD5("12345678901234567890123456789012345678901234567890123456789012345678901234567890"), 'MD5("12345678901234567890123456789012345678901234567890123456789012345678901234567890")');
 		}
-	});
+    }));
 
-	Y.Test.Runner.add(md5TestCase);
-	Y.Test.Runner.run();
-});
-		</script>
-  </body>
-</html>
+    Y.Test.Runner.add(suite);
 
+
+},'', { requires: [ 'gallery-crypto-md5', 'test' ] });

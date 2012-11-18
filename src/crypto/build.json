@@ -1,0 +1,11 @@
+{
+    "name": "crypto",
+    "builds": {
+        "gallery-crypto-md5": {
+            "jsfiles": [
+                "crypto.js",
+                "md5.js"
+            ]
+        }
+    }
+}

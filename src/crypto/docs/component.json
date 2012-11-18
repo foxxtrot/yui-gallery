@@ -1,0 +1,10 @@
+{
+    "name"       : "crypto",
+    "displayName": "Gallery: crypto",
+    "description": "Cryptography functions in JavaScript",
+    "author"     : [ "foxxtrot" ],
+
+    "tags": [ "gallery" ],
+
+    "examples": []
+}
