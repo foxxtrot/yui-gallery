@@ -1,0 +1,10 @@
+{
+    "name"       : "nodelist-extras",
+    "displayName": "Gallery: nodelist-extras",
+    "description": "A Collection of extensions on NodeList",
+    "author"     : [ "foxxtrot" ],
+
+    "tags": [ "gallery" ],
+
+    "examples": []
+}

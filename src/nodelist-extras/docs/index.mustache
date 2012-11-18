@@ -1,0 +1,21 @@
+<div class="intro">
+    <p>
+    A Collection of extensions on NodeList
+    </p>
+</div>
+
+<h2>Description</h2>
+
+<p>A collection of extensions to Y.NodeList. Please see the 'Docs' link below for an up-to-date description of what's in the module.<br>
+</p>
+
+```
+YUI().use('gallery-nodelist-extras', function(Y) {
+
+    Y.all('select option').filter(function(node) {
+        return Y.Lang.isNumber(+node.get('value'));
+    });
+
+});
+```
+

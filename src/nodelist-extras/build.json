@@ -1,0 +1,10 @@
+{
+    "name": "nodelist-extras",
+    "builds": {
+        "gallery-nodelist-extras": {
+            "jsfiles": [
+                "nodelist-extras.js"
+            ]
+        }
+    }
+}
