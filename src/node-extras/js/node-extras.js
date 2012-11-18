@@ -117,7 +117,7 @@ NodePrototype.prevAll = function(selector) {
  * Inserts the current node as the first child element of the given node
  * @method prependTo
  * @param {Node} The node to prepend to
- * @chainable 
+ * @chainable
  */
 NodePrototype.prependTo = function(node) {
     Y.one(node).insert(this, 0);

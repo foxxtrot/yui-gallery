@@ -1,58 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-<title>Node Test Suite</title>
+YUI.add('module-tests', function(Y) {
 
-<script type="text/javascript" src="../../../../yui3/build/yui/yui.js"></script>
-
-</head>
-<body class="yui3-skin-sam">
-    <div id="test-frag">
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-        <p>Lorem ipsum dolor <em>sit</em>.</p>
-    </div>
-    <div id="test-computed">test computed style</div>
-    <div id="test-nodes">
-        <ul>
-            <li>item 1</li>
-            <li>item 2</li>
-            <li>item 3</li>
-            <li>item 4</li>
-        </ul>
-        <ol>
-            <li class="bar">item 1</li>
-            <li>item 2</li>
-            <li>item 3</li>
-            <li class="bar">item 4</li>
-        </ol>
-    </div>
-
-    <ol id="test-swap">
-        <li>item 1</li>
-        <li>item 2</li>
-        <li>item 3</li>
-        <li>item 4</li>
-    </ol>
-
-    <ul id="test-outerHTML">
-        <li>item 1</li>
-        <li>item 2</li>
-        <li><select><option value="1">option 1</option><option value="2">option 2</option></select></li>
-    </ul>
-
-    <div id="test-nextAll">
-        <p>p</p>
-        <div>div</div>
-        <p>p</p>
-        <p class="start">p</p>
-        <div>div</div>
-        <p>p</p>
-        <div>div</div>
-    </div>
-    
-<div id="yui-log"></div>
-<script type="text/javascript">
-    YUI({base: '../../../../yui3/build/', filter: 'raw', groups: { gallery: { base: '../../../build/', modules: { 'gallery-node-extras': { path: 'gallery-node-extras/gallery-node-extras.js' }}}}}).use('node', 'gallery-node-extras', 'test', function(Y) {
 var Assert = Y.Assert,
     ArrayAssert = Y.ArrayAssert,
     suite = new Y.Test.Suite("yuisuite");
@@ -164,10 +111,5 @@ suite.add( new Y.Test.Case({
 
     Y.Test.Runner.add(suite);
 
-    Y.on('load', function() {
-            Y.Test.Runner.run();
-    }, window);
-});
-</script>
-</body>
-</html>
+},'', { requires: [ 'gallery-node-extras', 'test' ] });
+
