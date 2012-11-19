@@ -1,0 +1,10 @@
+{
+    "name": "chromahash",
+    "builds": {
+        "gallery-chromahash": {
+            "jsfiles": [
+                "chromahash.js"
+            ]
+        }
+    }
+}

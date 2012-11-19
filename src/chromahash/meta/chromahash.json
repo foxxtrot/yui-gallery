@@ -1,0 +1,5 @@
+{
+    "gallery-chromahash": {
+        "requires": ["plugin", "node-pluginhost", "anim-color", "gallery-crypto-md5"]
+    }
+}

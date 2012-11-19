@@ -1,0 +1,10 @@
+{
+    "name"       : "chromahash",
+    "displayName": "Gallery: chromahash",
+    "description": "Chromahash is a non-reversable password visualization module",
+    "author"     : [ "foxxtrot" ],
+
+    "tags": [ "gallery" ],
+
+    "examples": []
+}

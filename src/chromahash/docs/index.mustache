@@ -1,0 +1,17 @@
+<div class="intro">
+    <p>
+    Chromahash is a non-reversable password visualization module
+    </p>
+</div>
+
+<h2>Description</h2>
+
+<p>Chromahash is based on a <a href="http://mattt.github.com/Chroma-Hash/">jQuery module by Mattt Thompson</a>, to serve as a visualization for password fields to aide users in verifying that their password entry is complete before submitting a form. It uses one to four color bars derived from the user's password and an optional salt value.<br>
+</p>
+
+```
+YUI().use('gallery-chromahash', function(Y) {
+  Y.one('#password').plug(Y.ChromaHash, {bars: 3, salt: "password_salt", minimum: 5});
+});
+```
+
