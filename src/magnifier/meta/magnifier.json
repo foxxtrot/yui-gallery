@@ -1,0 +1,5 @@
+{
+    "gallery-magnifier": {
+        "requires": ["plugin", "node-core", "classnamemanager"]
+    }
+}
