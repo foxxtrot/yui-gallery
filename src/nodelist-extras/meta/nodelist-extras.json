@@ -1,3 +1,5 @@
 {
-    "nodelist-extras": {}
+    "gallery-nodelist-extras": {
+        "requires": ["node-core"]
+    }
 }
